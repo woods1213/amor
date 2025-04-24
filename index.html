@@ -38,12 +38,21 @@
   const totalFotos = 80;
   const faixa = document.getElementById("faixa");
 
+const extensoes = ['jpg', 'jpeg'];
+
 for (let i = 1; i <= totalFotos; i++) {
-    const img = document.createElement("img");
-    img.src = `fotos/foto${i}.jpeg`;
-    img.classList.add("foto");
-    faixa.appendChild(img);
-  }
+  extensoes.forEach(ext => {
+    const testeImg = new Image();
+    testeImg.src = `fotos/foto${i}.${ext}`;
+    testeImg.onload = () => {
+      const img = document.createElement("img");
+      img.src = testeImg.src;
+      img.classList.add("foto");
+      faixa.appendChild(img);
+    };
+    // Se falhar no carregamento, nada acontece (não adiciona imagem quebrada)
+  });
+}
 
   let startX = 0;
   let atual = 0;
