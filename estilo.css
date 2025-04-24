@@ -62,8 +62,8 @@ p {
 .modal-conteudo {
   background: #fff;
   width: 90vw;
-  max-width: 600px;
-  height: 65vh;
+  max-width: 80vw;
+  height: 85vh;
   border-radius: 12px;
   padding: 20px;
   box-sizing: border-box;
