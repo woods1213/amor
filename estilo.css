@@ -51,7 +51,7 @@ p {
 .modal {
   position: fixed;
   top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  width: 100vw; height: 85vh;
   background: rgba(0,0,0,0.7);
   display: flex;
   align-items: center;
@@ -63,8 +63,7 @@ p {
   background: #fff;
   width: 90vw;
   max-width: 80vw;
-  height: 75vh;
-  max-height: 75vh;
+  height: 85vh;
   border-radius: 12px;
   padding: 20px;
   box-sizing: border-box;
