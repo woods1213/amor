@@ -38,22 +38,12 @@
   const totalFotos = 80;
   const faixa = document.getElementById("faixa");
 
-  for (let i = 1; i <= totalFotos; i++) {
-  const img = document.createElement("img");
-  const jpgPath = `fotos/foto${i}.jpg`;
-  const jpegPath = `fotos/foto${i}.jpeg`;
-
-  img.src = jpgPath;
-
-  // Se a .jpg der erro, tenta .jpeg
-  img.onerror = () => {
-    img.onerror = null; // evita loop
-    img.src = jpegPath;
-  };
-
-  img.classList.add("foto");
-  faixa.appendChild(img);
-}
+for (let i = 1; i <= totalFotos; i++) {
+    const img = document.createElement("img");
+    img.src = `fotos/foto${i}.jpeg`;
+    img.classList.add("foto");
+    faixa.appendChild(img);
+  }
 
   let startX = 0;
   let atual = 0;
